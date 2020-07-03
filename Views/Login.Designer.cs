@@ -18,7 +18,7 @@ namespace SistemaFilipini
         public void InitializeComponent(Form parent)
         {
             this.Text = "Login";
-            this.BackColor = Color.Gray;
+            this.BackColor = Color.LightGray;
             this.Font = new Font(this.Font, FontStyle.Bold);
             this.Size = new Size(400, 270);
             this.parent = parent;

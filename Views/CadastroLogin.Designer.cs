@@ -21,13 +21,18 @@ namespace SistemaFilipini
         Form parent;
 
         // Customer data entry
-        public void InitializeComponent(Form parent)
+        public void InitializeComponent(Form parent, bool isUpdate)
         {
             this.Text = "Cadastro Usuário";
-            this.BackColor = Color.Gray;
+            this.BackColor = Color.LightGray;
             this.Font = new Font(this.Font, FontStyle.Bold);
             this.Size = new Size(400, 300);
             this.parent = parent;
+
+            if (isUpdate)
+            {
+                this.Load += new EventHandler(this.LoadForm);
+            }
 
             this.lbl_Nome = new Library.Label();
             this.lbl_Nome.Text = "Nome Completo:";
