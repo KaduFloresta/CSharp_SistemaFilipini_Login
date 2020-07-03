@@ -21,5 +21,11 @@ namespace SistemaFilipini
             this.Close();
             this.parent.Show();
         }
+        
+        private void btn_ListaUsuariosClick(object sender, EventArgs e)
+        {
+            ListaUsuario listaUsuarioClick = new ListaUsuario(this);
+            listaUsuarioClick.Show();
+        }
     }
 }
