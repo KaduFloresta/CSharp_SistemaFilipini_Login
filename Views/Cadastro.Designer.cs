@@ -6,6 +6,7 @@ namespace SistemaFilipini
 {
     partial class Cadastro : Form
     {
+        // Library com os parâmetros em comum entre os componentes
         Library.Button btn_Cientes;
         Library.Button btn_Produtos;
         Library.Button btn_Fornecedores;
@@ -14,32 +15,33 @@ namespace SistemaFilipini
         Library.Button btn_MenuSair;
         Form parent;
 
-        // Customer data entry
         public void InitializeComponent(Form parent)
         {
+            // Parêmetros da janela principal dos Cadastros
             this.Text = "Cadastro";
             this.BackColor = Color.LightGray;
             this.Font = new Font(this.Font, FontStyle.Bold);
             this.Size = new Size(400, 300);
-            this. parent = parent;
+            this.parent = parent;
 
+            // Componentes da janela
             this.btn_Cientes = new Library.Button();
             this.btn_Cientes.Location = new Point(40, 10);
             this.btn_Cientes.Text = "CLIENTES";
             this.Controls.Add(btn_Cientes);
-            //this.btn_Cientes.Click += new EventHandler(btn_CientesClick);
+            this.btn_Cientes.Click += new EventHandler(btn_ClientesClick);
 
             this.btn_Produtos = new Library.Button();
             this.btn_Produtos.Location = new Point(220, 10);
             this.btn_Produtos.Text = "PRODUTOS";
             this.Controls.Add(btn_Produtos);
-            //this.btn_Produtos.Click += new EventHandler(btn_ProdutosClick);
+            this.btn_Produtos.Click += new EventHandler(btn_ProdutosClick);
 
             this.btn_Fornecedores = new Library.Button();
             this.btn_Fornecedores.Location = new Point(40, 80);
             this.btn_Fornecedores.Text = "FORNECEDORES";
             this.Controls.Add(btn_Fornecedores);
-            //this.btn_Fornecedores.Click += new EventHandler(btn_FornecedoresClick);
+            this.btn_Fornecedores.Click += new EventHandler(btn_FornecedoresClick);
 
             this.btn_Usuarios = new Library.Button();
             this.btn_Usuarios.Location = new Point(220, 80);
@@ -49,7 +51,7 @@ namespace SistemaFilipini
 
             this.btn_ListaUsuarios = new Library.Button();
             this.btn_ListaUsuarios.Location = new Point(115, 140);
-            this.btn_ListaUsuarios.Size = new Size (150, 30);
+            this.btn_ListaUsuarios.Size = new Size(150, 30);
             this.btn_ListaUsuarios.BackColor = Color.DarkGray;
             this.btn_ListaUsuarios.ForeColor = Color.Black;
             this.btn_ListaUsuarios.Text = "LISTA USUÁRIOS";

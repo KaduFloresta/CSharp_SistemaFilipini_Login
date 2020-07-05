@@ -20,20 +20,22 @@ namespace SistemaFilipini
         Library.Button btn_Cancelar;
         Form parent;
 
-        // Customer data entry
         public void InitializeComponent(Form parent, bool isUpdate)
         {
+            // Parêmetros da janela Cadastro Usuário
             this.Text = "Cadastro Usuário";
             this.BackColor = Color.LightGray;
             this.Font = new Font(this.Font, FontStyle.Bold);
             this.Size = new Size(400, 300);
             this.parent = parent;
 
+            // Tratativa para evento do LoadForm (Alterção) 
             if (isUpdate)
             {
                 this.Load += new EventHandler(this.LoadForm);
             }
 
+            // Componentes da janela
             this.lbl_Nome = new Library.Label();
             this.lbl_Nome.Text = "Nome Completo:";
             this.lbl_Nome.Location = new Point(20, 20);
@@ -83,7 +85,7 @@ namespace SistemaFilipini
             this.cb_Tipo.Location = new Point(150, 140);
             this.cb_Tipo.Size = new Size(200, 20);
             this.Controls.Add(cb_Tipo);
-            
+
             this.btn_Confirmar = new Library.Button();
             this.btn_Confirmar.Text = "CONFIRMAR";
             this.btn_Confirmar.Location = new Point(60, 190);
