@@ -8,46 +8,38 @@ namespace Models
 {
     public class UsuarioModels
     {
-        [Key] // Data Annotations - Main key
+        [Key] // Data Annotations - Chave principal
         public int IdUsuario { get; set; }
-        [Required] // Mandatory data entry
+        [Required] // Propriedades requeridas na classe
         public string NomeCompleto { get; set; }
-        [Required] // Mandatory data entry
+        [Required]
         public string UsuarioLogin { get; set; }
         [Required]
         public string Senha { get; set; }
         [Required]
         public string TipoUsuario { get; set; }
-        //public List<LocacaoModels> locacoes = new List<LocacaoModels>();
 
-        /// <summary>
-        /// Constructor - UsuarioModels Object
-        /// </summary>
+        // Construtor do objeto UsuarioModels
         public UsuarioModels(string nomeCompleto, string usuarioLogin, string senha, string tipoUsuario)
         {
             NomeCompleto = nomeCompleto;
             UsuarioLogin = usuarioLogin;
             Senha = senha;
             TipoUsuario = tipoUsuario;
-            //locacoes = new List<LocacaoModels>();
 
             var db = new Context();
             db.Usuarios.Add(this);
             db.SaveChanges();
         }
 
-        /// <summary>
-        /// 2nd Constructor - UsuarioModels Object
-        /// Using on Entity Framework DONT REMOVE!!!
-        /// </summary>
+        // 2º Constructor do obejto UsuarioModels
+        // Usado pelo Entity Framework NÃO REMOVA!!!
         public UsuarioModels()
         {
 
         }
 
-        /// <summary>
-        ///  To find a user (LinQ)
-        /// </summary>
+        // Método para pegar o usuário pelo ID        
         public static UsuarioModels GetUsuario(int idUsuario)
         {
             var db = new Context();
@@ -56,19 +48,15 @@ namespace Models
                     select usuario).First();
         }
 
-        /// <summary>
-        /// Return customer list from DB
-        /// </summary>
+        // Método para pegar a lista de usuários       
         public static List<UsuarioModels> GetUsuarios()
         {
             var db = new Context();
             return db.Usuarios.ToList();
         }
 
-        /// <summary>
-        /// Update user into the database
-        /// </summary>
-        public static void UpdateUsuario(
+        // Método para alterar os dados do usuário       
+        public static void AlterarUsuario(
             int IdUsuario,
             string nomeCompleto,
             string usuarioLogin,
@@ -78,7 +66,8 @@ namespace Models
         {
             Context db = new Context();
             try
-            {UsuarioModels usuario = db.Usuarios.First(usuario => usuario.IdUsuario == IdUsuario);
+            {
+                UsuarioModels usuario = db.Usuarios.First(usuario => usuario.IdUsuario == IdUsuario);
                 usuario.NomeCompleto = nomeCompleto;
                 usuario.UsuarioLogin = usuarioLogin;
                 usuario.Senha = senha;
@@ -91,10 +80,8 @@ namespace Models
             }
         }
 
-        /// <summary>
-        /// Delete user into the database
-        /// </summary>
-        public static void DeleteUsuario(int idUsuario)
+        // Método de deleção do usuário        
+        public static void DeletarUsuario(int idUsuario)
         {
             Context db = new Context();
             try

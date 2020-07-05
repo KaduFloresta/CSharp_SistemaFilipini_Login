@@ -6,7 +6,6 @@ namespace Library
 {
     public class Button : System.Windows.Forms.Button
     {
-
         public Button()
         {
             this.Size = new Size(120, 40);

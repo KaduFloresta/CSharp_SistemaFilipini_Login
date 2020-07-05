@@ -1,97 +1,133 @@
 using System;
 using System.Drawing;
-using System.Globalization;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SistemaFilipini
 {
     static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
+            // Solicitando o login dentro da MAIN
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaPrincipal());
+            // Instância do formulário login
+            Login frm = new Login();
+            // Se o resultado do dialogo for ok ou seja se o usuario e login constarem no bd
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // Abro o formulário principal
+                Application.Run(new TelaPrincipal());
+            }
+            else
+            {
+                // Senão mostro a mensagem e fecho a apicação
+                MessageBox.Show("Usuário ou Senha inválido!");
+            }
         }
-
-        public class TelaPrincipal : Form
+        public class Login : Form
         {
-            Library.Button btn_Cadastro;
-            Library.Button btn_Vendas;
-            Library.Button btn_Compras;
-            Library.Button btn_Relatorios;
-            Library.Button btn_MenuSair;
+            Library.GroupBox lbl_DadosUsuario;
+            Library.Label lbl_Usuario;
+            Library.Label lbl_Senha;
+            Library.TextBox txt_Usuario;
+            Library.TextBox txt_Senha;
+            Library.Button btn_OK;
+            Library.Button btn_Sair;
 
-            public TelaPrincipal()
+            // Dados de entrada do Login do Usuário
+            public Login()
             {
-                this.Text = "SISTEMA FILIPINI";
-                this.BackColor = Color.Gray;
+                // Parêmetros da janela de login
+                this.Text = "Login";
+                this.BackColor = Color.LightGray;
                 this.Font = new Font(this.Font, FontStyle.Bold);
-                this.Size = new Size(400, 300);
-     
-                this.btn_Cadastro = new Library.Button();
-                this.btn_Cadastro.Location = new Point(40, 50);
-                this.btn_Cadastro.Text = "CADASTRO";
-                this.Controls.Add(btn_Cadastro);
-                this.btn_Cadastro.Click += new EventHandler(btn_CadastroClick);
+                this.Size = new Size(400, 270);
 
-                this.btn_Vendas = new Library.Button();
-                this.btn_Vendas.Location = new Point(220, 50);
-                this.btn_Vendas.Text = "VENDAS";
-                this.Controls.Add(btn_Vendas);
-                this.btn_Vendas.Click += new EventHandler(btn_VendasClick);
+                // Componentes da Janela
+                this.lbl_Usuario = new Library.Label();
+                this.lbl_Usuario.Text = "Usuário:";
+                this.lbl_Usuario.Location = new Point(90, 40);
+                this.Controls.Add(lbl_Usuario);
 
-                this.btn_Compras = new Library.Button();
-                this.btn_Compras.Location = new Point(40, 120);
-                this.btn_Compras.Text = "COMPRAS";
-                this.Controls.Add(btn_Compras);
-                //this.btn_Compras.Click += new EventHandler(btn_ComprasClick);
+                this.txt_Usuario = new Library.TextBox();
+                this.txt_Usuario.Location = new Point(90, 60);
+                this.Controls.Add(txt_Usuario);
 
-                this.btn_Relatorios = new Library.Button();
-                this.btn_Relatorios.Location = new Point(220, 120);
-                this.btn_Relatorios.Text = "RELATÓRIOS";
-                this.Controls.Add(btn_Relatorios);
-                //this.btn_Relatorios.Click += new EventHandler(btn_RelatoriosClick);
+                this.lbl_Senha = new Library.Label();
+                this.lbl_Senha.Text = "Senha :";
+                this.lbl_Senha.Location = new Point(90, 100);
+                this.Controls.Add(lbl_Senha);
 
-                this.btn_MenuSair = new Library.Button();
-                this.btn_MenuSair.Location = new Point(130, 190);
-                this.btn_MenuSair.Text = "SAIR";
-                this.Controls.Add(btn_MenuSair);
-                this.btn_MenuSair.Click += new EventHandler(btn_MenuSairClick);
+                this.txt_Senha = new Library.TextBox();
+                this.txt_Senha.Location = new Point(90, 120);
+                this.Controls.Add(txt_Senha);
+
+                this.btn_OK = new Library.Button();
+                this.btn_OK.Text = "OK";
+                this.btn_OK.Location = new Point(50, 160);
+                this.btn_OK.BackColor = Color.Green;
+                this.btn_OK.ForeColor = Color.Black;
+                this.btn_OK.Click += new EventHandler(this.btn_OKClick);
+                this.Controls.Add(btn_OK);
+
+                this.btn_Sair = new Library.Button();
+                this.btn_Sair.Text = "SAIR";
+                this.btn_Sair.Location = new Point(210, 160);
+                this.btn_Sair.BackColor = Color.Red;
+                this.btn_Sair.ForeColor = Color.Black;
+                this.btn_Sair.Click += new EventHandler(this.btn_SairClick);
+                this.Controls.Add(btn_Sair);
+
+                this.lbl_DadosUsuario = new Library.GroupBox();
+                this.lbl_DadosUsuario.Location = new Point(10, 10);
+                this.lbl_DadosUsuario.Text = "Dados do Usuário";
+                this.Controls.Add(lbl_DadosUsuario);
             }
 
-            private void btn_CadastroClick(object sender, EventArgs e)
+            // Botão de confirmação do Login
+            private void btn_OKClick(object sender, EventArgs e)
             {
-                Cadastro cadastroClick = new Cadastro(this);
-                cadastroClick.Show();
+                // Método que testa o retorno com os parâmetros (true)
+                if (ValidaUsuario(txt_Usuario.Text, txt_Senha.Text))
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.Cancel;
+                }
             }
 
-            private void btn_VendasClick(object sender, EventArgs e)
+            //Método de validação do Usuário (2 strings - Login e Senha)
+            private bool ValidaUsuario(string UsuarioLogin, string Senha)
             {
-                // Usando o Botão Vendas para testar a interface de Login
-                Login vendasClick = new Login(this);
-                vendasClick.Show();
+                // Variável para teste de retorno
+                int retorno = -1;
+                // Instância da conexão
+                MySqlConnection conn = new MySqlConnection(@"Server=localhost;User Id=root;Database=embutidos;");
+                // Comando sql COUNT para buscar Login e Senha
+                string comando = "SELECT COUNT(*) FROM usuarios WHERE UsuarioLogin=@UsuarioLogin AND Senha=@Senha";
+                // Instância do comando
+                MySqlCommand cmd = new MySqlCommand(comando, conn);
+                // Preenchimento dos parâmetros
+                cmd.Parameters.AddWithValue("@UsuarioLogin", UsuarioLogin);
+                cmd.Parameters.AddWithValue("@Senha", Senha);
+                // Abre a conexão
+                conn.Open();
+                // Retorno recebe o resultado do execute "scalar"
+                retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                // Fecho a conexão
+                conn.Close();
+                // Retorno true se retorno for maior que zero
+                return retorno > 0;
             }
 
-            private void btn_ComprasClick(object sender, EventArgs e)
-            {
-                // CadastroLogin cadastrarClienteClick = new CadastroLogin(this);
-                // cadastrarClienteClick.Show();
-            }
-
-            private void btn_RelatoriosClick(object sender, EventArgs e)
-            {
-                // CadastroLogin cadastrarClienteClick = new CadastroLogin(this);
-                // cadastrarClienteClick.Show();
-            }
-
-            // Method to close system
-            private void btn_MenuSairClick(object sender, EventArgs e)
+            // Botão Sair do Login
+            private void btn_SairClick(object sender, EventArgs e)
             {
                 this.Close();
             }

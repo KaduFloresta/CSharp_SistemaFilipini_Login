@@ -1,9 +1,9 @@
 using System;
-using System.Collections.Generic;
+using Models;
+using Controllers;
 using System.Drawing;
 using System.Windows.Forms;
-using Controllers;
-using Models;
+using System.Collections.Generic;
 
 namespace SistemaFilipini
 {
@@ -15,16 +15,17 @@ namespace SistemaFilipini
         Library.Button btn_ListaDeletar;
         Library.Button btn_ListaSair;
         Form parent;
-
-        // Customer data entry
+        
         public void InitializeComponent(Form parent)
         {
+            // Parêmetros da janela Lista de Usuários
             this.Text = "Lista Usuários";
             this.BackColor = Color.LightGray;
             this.Font = new Font(this.Font, FontStyle.Bold);
             this.Size = new Size(400, 380);
             this.parent = parent;
 
+            // Componentes da janela
             this.lv_ListaUsuarios = new Library.ListView();
             this.lv_ListaUsuarios.Location = new Point(10, 10);
             this.lv_ListaUsuarios.Size = new Size(350, 200);
@@ -47,6 +48,8 @@ namespace SistemaFilipini
             this.lv_ListaUsuarios.Columns.Add("Tipo de Usuário", -2, HorizontalAlignment.Center);
             this.Controls.Add(lv_ListaUsuarios);
 
+            // 3 Botões de acesso ao CRUD dentro da Lista
+            // Consulta (Read), Altera (Update) e Deleta (Delete)
             this.btn_ListaConsulta = new Library.Button();
             this.btn_ListaConsulta.Location = new Point(30, 230);
             this.btn_ListaConsulta.Size = new Size(150, 30);

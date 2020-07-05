@@ -1,22 +1,17 @@
-using System;
 using Models;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace Controllers
 {
     public class UsuarioController
     {
-        /// <summary>
-        /// Insert user into the database
-        /// </summary>
+        // Inserindo usuário no banco de dados
         public static void CadastrarUsuario(
             string nomeCompleto,
             string usuarioLogin,
             string senha,
             string tipoUsuario
             )
-
         {
             new UsuarioModels(
                 nomeCompleto,
@@ -25,26 +20,20 @@ namespace Controllers
                 tipoUsuario);
         }
 
-        /// <summary>
-        ///  Access to find a user by ID
-        /// </summary>
+        // Acessando usuário no BD pelo ID
         public static UsuarioModels GetUsuario(int idUsuario)
         {
             return UsuarioModels.GetUsuario(idUsuario);
         }
 
-        /// <summary>
-        /// Access all users
-        /// </summary>
+        // Acessando todos usuários
         public static List<UsuarioModels> GetUsuarios()
         {
             return UsuarioModels.GetUsuarios();
         }
 
-        /// <summary>
-        /// Access to Update user
-        /// </summary>
-        public static void UpdateUsuario(
+        // Acessando o método de alteração
+        public static void AlterarUsuario(
             int idUsuario,
             string nomeCompleto,
             string usuarioLogin,
@@ -52,7 +41,7 @@ namespace Controllers
             string tipoUsuario
             )
         {
-            UsuarioModels.UpdateUsuario(
+            UsuarioModels.AlterarUsuario(
             idUsuario,
             nomeCompleto,
             usuarioLogin,
@@ -61,12 +50,10 @@ namespace Controllers
             );
         }
 
-        /// <summary>
-        /// Access to Delete user
-        /// </summary>
-        public static void DeleteUsuario(int idUsuario)
+        // Acessando o método de deleção
+        public static void DeletarUsuario(int idUsuario)
         {
-            UsuarioModels.DeleteUsuario(idUsuario);
+            UsuarioModels.DeletarUsuario(idUsuario);
         }
     }
 }
