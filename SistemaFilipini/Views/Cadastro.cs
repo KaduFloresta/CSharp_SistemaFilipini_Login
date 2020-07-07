@@ -1,6 +1,8 @@
 using System;
 using Models;
 using System.Windows.Forms;
+using System.Linq;
+using Controllers;
 
 namespace SistemaFilipini
 {
@@ -15,7 +17,8 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário e Funcionário)
         private void btn_ClientesClick(object sender, EventArgs e)
         {
-            // if (usuario.TipoUsuario != "Fornecedor")
+            MessageBox.Show("Teste!!!");
+            // if (Program.Login.usuarioConectado != "Fornecedor")
             // {
             //     MessageBox.Show("Acesso Concedido!");
             // }
@@ -29,6 +32,7 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário e Funcionário)
         private void btn_ProdutosClick(object sender, EventArgs e)
         {
+            MessageBox.Show("Teste!!!");
             // if (usuario.TipoUsuario != "Fornecedor")
             // {
             //     MessageBox.Show("Acesso Concedido!");
@@ -43,6 +47,7 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário)
         private void btn_FornecedoresClick(object sender, EventArgs e)
         {
+            MessageBox.Show("Teste!!!");
             // if (usuario.TipoUsuario == "Proprietário")
             // {
             //     MessageBox.Show("Acesso Concedido!");

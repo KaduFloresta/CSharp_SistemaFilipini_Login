@@ -24,12 +24,15 @@ namespace SistemaFilipini
             }
             else
             {
-                // Senão mostro a mensagem e fecho a apicação
-                MessageBox.Show("Usuário ou Senha inválido!");
+                // Senão mostro a mensagem e reabro a tela de login
+                MessageBox.Show("Usuário e/ou Senha inválido.");
+                Application.Run(new Login());
             }
         }
         public class Login : Form
         {
+            // public bool logado = false;
+            // public static string usuarioConectado;
             Library.GroupBox lbl_DadosUsuario;
             Library.Label lbl_Usuario;
             Library.Label lbl_Senha;
@@ -105,25 +108,50 @@ namespace SistemaFilipini
             //Método de validação do Usuário (2 strings - Login e Senha)
             private bool ValidaUsuario(string UsuarioLogin, string Senha)
             {
-                // Variável para teste de retorno
-                int retorno = -1;
-                // Instância da conexão
-                MySqlConnection conn = new MySqlConnection(@"Server=localhost;User Id=root;Database=embutidos;");
-                // Comando sql COUNT para buscar Login e Senha
-                string comando = "SELECT COUNT(*) FROM usuarios WHERE UsuarioLogin=@UsuarioLogin AND Senha=@Senha";
-                // Instância do comando
-                MySqlCommand cmd = new MySqlCommand(comando, conn);
-                // Preenchimento dos parâmetros
-                cmd.Parameters.AddWithValue("@UsuarioLogin", UsuarioLogin);
-                cmd.Parameters.AddWithValue("@Senha", Senha);
-                // Abre a conexão
-                conn.Open();
-                // Retorno recebe o resultado do execute "scalar"
-                retorno = Convert.ToInt32(cmd.ExecuteScalar());
-                // Fecho a conexão
-                conn.Close();
-                // Retorno true se retorno for maior que zero
-                return retorno > 0;
+                // Acesso ao método Campos Preenchidos Obrigatorio
+                bool resultado = Controllers.LoginController.CamposPreenchidosLogin(UsuarioLogin, Senha);
+                if (resultado)
+                {
+                    // Variável para teste de retorno
+                    int retorno = -1;
+                    // Instância da conexão
+                    MySqlConnection conn = new MySqlConnection(@"Server=localhost;User Id=root;Database=embutidos;");
+                    // Comando sql COUNT para buscar Login e Senha
+                    string comando = "SELECT COUNT(*) FROM usuarios WHERE UsuarioLogin=@UsuarioLogin AND Senha=@Senha";
+                    // Instância do comando
+                    MySqlCommand cmd = new MySqlCommand(comando, conn);
+                    // Preenchimento dos parâmetros
+                    cmd.Parameters.AddWithValue("@UsuarioLogin", UsuarioLogin);
+                    cmd.Parameters.AddWithValue("@Senha", Senha);
+                    // Abre a conexão
+                    conn.Open();
+                    // Retorno recebe o resultado do execute "scalar"
+                    retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                    //var reader = cmd.ExecuteReader(); 
+
+                    // Busca pela coluna "TipoUsuario" dentro do BD
+                    // if (retorno > 0)
+                    // {
+
+                    //     logado = true;
+                    //     usuarioConectado = reader ["TipoUsuario"].ToString();
+                    //     this.Dispose();
+                    // }
+                    // else
+                    // {
+                    //     logado = false;
+                    //     MessageBox.Show("Usuário e/ou Senha inválido.");
+                    // }
+
+                    // Fecho a conexão
+                    conn.Close();
+                    // Retorno true se retorno for maior que zero
+                    return retorno > 0;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
             // Botão Sair do Login
