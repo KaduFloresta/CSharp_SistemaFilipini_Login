@@ -55,5 +55,35 @@ namespace Controllers
         {
             UsuarioModels.DeletarUsuario(idUsuario);
         }
+
+        public static bool ConfirmarSenhasIguais(string senha1, string senha2)
+        {
+            if (senha1 == senha2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool CamposPreenchidosCadastroUsuario(
+            string nomeCompleto,
+            string usuario,
+            string senha,
+            string confirmarSenha,
+            string tipo)
+        {
+            if ((nomeCompleto == string.Empty)
+                || (usuario == string.Empty)
+                || (senha == string.Empty)
+                || (confirmarSenha == string.Empty)
+                || (tipo == string.Empty))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

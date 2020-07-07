@@ -22,7 +22,7 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário e Funcionário)
         private void btn_VendasClick(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Teste!!!");
             // if (usuario.TipoUsuario == "Proprietário")
             // {
             //     MessageBox.Show("Acesso Concedido!");
@@ -37,6 +37,7 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário)
         private void btn_ComprasClick(object sender, EventArgs e)
         {
+            MessageBox.Show("Teste!!!");
             // if (usuario.TipoUsuario == "Proprietário"
             // && usuario.TipoUsuario == "Fornecedor")
             // {
@@ -52,6 +53,7 @@ namespace SistemaFilipini
         // Nível de Acesso (Usuário Proprietário)
         private void btn_RelatoriosClick(object sender, EventArgs e)
         {
+            MessageBox.Show("Teste!!!");
             // if (usuario.TipoUsuario == "Proprietário")
             // {
             //     MessageBox.Show("Acesso Concedido!");

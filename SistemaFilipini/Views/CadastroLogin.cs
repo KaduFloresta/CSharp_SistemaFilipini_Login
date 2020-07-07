@@ -27,13 +27,9 @@ namespace SistemaFilipini
         {
             try
             {
-                if ((txt_NomeCompleto.Text != string.Empty)
-                && (txt_Usuario.Text != string.Empty)
-                && (txt_Senha.Text != string.Empty)
-                && (txt_ConfirmarSenha.Text != string.Empty)
-                && (cb_Tipo.Text != string.Empty))
+                if (Controllers.UsuarioController.CamposPreenchidosCadastroUsuario(txt_NomeCompleto.Text, txt_Usuario.Text, txt_Senha.Text, txt_ConfirmarSenha.Text, cb_Tipo.Text))
                 {
-                    if (txt_Senha.Text.Equals(txt_ConfirmarSenha.Text))
+                    if (Controllers.UsuarioController.ConfirmarSenhasIguais(txt_Senha.Text, txt_ConfirmarSenha.Text))
                     {
                         if (usuario == null)
                         {
@@ -48,7 +44,6 @@ namespace SistemaFilipini
                                     : "Fornecedor"
                             );
                             MessageBox.Show("Cadastrado Com Sucesso!");
-
                         }
                         else
                         {

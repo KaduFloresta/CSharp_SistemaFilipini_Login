@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SistemaFilipini.csproj" />
+    <ProjectReference Include="..\SistemaFilipini\SistemaFilipini.csproj" />
   </ItemGroup>
 
 </Project>
