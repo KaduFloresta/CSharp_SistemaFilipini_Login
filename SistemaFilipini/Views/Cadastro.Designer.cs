@@ -13,9 +13,9 @@ namespace SistemaFilipini
         Library.Button btn_Usuarios;
         Library.Button btn_ListaUsuarios;
         Library.Button btn_MenuSair;
-        Form parent;
+        TelaPrincipal parent;
 
-        public void InitializeComponent(Form parent)
+        public void InitializeComponent(TelaPrincipal parent)
         {
             // Parêmetros da janela principal dos Cadastros
             this.Text = "Cadastro";

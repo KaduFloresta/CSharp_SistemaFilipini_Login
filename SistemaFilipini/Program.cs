@@ -14,20 +14,7 @@ namespace SistemaFilipini
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Instância do formulário login
-            Login frm = new Login();
-            // Se o resultado do dialogo for ok ou seja se o usuario e login constarem no bd
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                // Abro o formulário principal
-                Application.Run(new TelaPrincipal());
-            }
-            else
-            {
-                // Senão mostro a mensagem e reabro a tela de login
-                MessageBox.Show("Usuário e/ou Senha inválido.");
-                Application.Run(new Login());
-            }
+            Application.Run(new Login());
         }
         public class Login : Form
         {
@@ -40,7 +27,6 @@ namespace SistemaFilipini
             Library.TextBox txt_Senha;
             Library.Button btn_OK;
             Library.Button btn_Sair;
-
             // Dados de entrada do Login do Usuário
             public Login()
             {
@@ -94,63 +80,15 @@ namespace SistemaFilipini
             // Botão de confirmação do Login
             private void btn_OKClick(object sender, EventArgs e)
             {
-                // Método que testa o retorno com os parâmetros (true)
-                if (ValidaUsuario(txt_Usuario.Text, txt_Senha.Text))
+                try
                 {
-                    this.DialogResult = DialogResult.OK;
+                    // Salva no usuario do form o usuario ue foi pesuisado no banco
+                    Models.UsuarioModels usuario = Models.UsuarioModels.ValidaUsuario(txt_Usuario.Text, txt_Senha.Text);
+                    new TelaPrincipal(usuario).Show();
                 }
-                else
+                catch (Exception error)
                 {
-                    this.DialogResult = DialogResult.Cancel;
-                }
-            }
-
-            //Método de validação do Usuário (2 strings - Login e Senha)
-            private bool ValidaUsuario(string UsuarioLogin, string Senha)
-            {
-                // Acesso ao método Campos Preenchidos Obrigatorio
-                bool resultado = Controllers.LoginController.CamposPreenchidosLogin(UsuarioLogin, Senha);
-                if (resultado)
-                {
-                    // Variável para teste de retorno
-                    int retorno = -1;
-                    // Instância da conexão
-                    MySqlConnection conn = new MySqlConnection(@"Server=localhost;User Id=root;Database=embutidos;");
-                    // Comando sql COUNT para buscar Login e Senha
-                    string comando = "SELECT COUNT(*) FROM usuarios WHERE UsuarioLogin=@UsuarioLogin AND Senha=@Senha";
-                    // Instância do comando
-                    MySqlCommand cmd = new MySqlCommand(comando, conn);
-                    // Preenchimento dos parâmetros
-                    cmd.Parameters.AddWithValue("@UsuarioLogin", UsuarioLogin);
-                    cmd.Parameters.AddWithValue("@Senha", Senha);
-                    // Abre a conexão
-                    conn.Open();
-                    // Retorno recebe o resultado do execute "scalar"
-                    retorno = Convert.ToInt32(cmd.ExecuteScalar());
-                    //var reader = cmd.ExecuteReader(); 
-
-                    // Busca pela coluna "TipoUsuario" dentro do BD
-                    // if (retorno > 0)
-                    // {
-
-                    //     logado = true;
-                    //     usuarioConectado = reader ["TipoUsuario"].ToString();
-                    //     this.Dispose();
-                    // }
-                    // else
-                    // {
-                    //     logado = false;
-                    //     MessageBox.Show("Usuário e/ou Senha inválido.");
-                    // }
-
-                    // Fecho a conexão
-                    conn.Close();
-                    // Retorno true se retorno for maior que zero
-                    return retorno > 0;
-                }
-                else
-                {
-                    return false;
+                    MessageBox.Show(error.Message);
                 }
             }
 

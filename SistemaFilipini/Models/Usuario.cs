@@ -27,7 +27,7 @@ namespace Models
             Senha = senha;
             TipoUsuario = tipoUsuario;
 
-            var db = new Context();
+            Context db = new Context();
             db.Usuarios.Add(this);
             db.SaveChanges();
         }
@@ -93,6 +93,23 @@ namespace Models
             catch
             {
                 throw new ArgumentException();
+            }
+        }
+
+        // LinQ para validar usuario dentro do BD
+        public static UsuarioModels ValidaUsuario(string login, string senha)
+        {
+            try
+            {
+            Context db = new Context();
+            IEnumerable<UsuarioModels> usuario = from UsuarioModels in db.Usuarios
+                                                 where UsuarioModels.UsuarioLogin == login && UsuarioModels.Senha == senha
+                                                 select UsuarioModels;
+            return usuario.ToArray().First();
+            }
+            catch
+            {
+                throw new Exception("Usuário e/ou Senha Inválido!");
             }
         }
     }

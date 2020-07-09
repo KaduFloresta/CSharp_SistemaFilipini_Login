@@ -1,77 +1,87 @@
 using System;
-using Models;
 using System.Windows.Forms;
-using System.Linq;
-using Controllers;
+using Models;
 
 namespace SistemaFilipini
 {
     public partial class Cadastro : Form
     {
-        public Cadastro(Form parent)
+        public Cadastro(TelaPrincipal parent)
         {
             InitializeComponent(parent);
+
         }
 
         // Botão de acesso a tela Cadastro do Usuário
         // Nível de Acesso (Usuário Proprietário e Funcionário)
         private void btn_ClientesClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Teste!!!");
-            // if (Program.Login.usuarioConectado != "Fornecedor")
-            // {
-            //     MessageBox.Show("Acesso Concedido!");
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Acesso Negado!");
-            // }
+            if (this.parent.usuario.TipoUsuario != "Fornecedor")
+            {
+                MessageBox.Show("Acesso Concedido!");
+            }
+            else
+            {
+                MessageBox.Show("Acesso Negado!");
+            }
         }
 
         // Botão de acesso a tela Cadastro de Produtos
         // Nível de Acesso (Usuário Proprietário e Funcionário)
         private void btn_ProdutosClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Teste!!!");
-            // if (usuario.TipoUsuario != "Fornecedor")
-            // {
-            //     MessageBox.Show("Acesso Concedido!");
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Acesso Negado!");
-            // }
+            if (this.parent.usuario.TipoUsuario != "Fornecedor")
+            {
+                MessageBox.Show("Acesso Concedido!");
+            }
+            else
+            {
+                MessageBox.Show("Acesso Negado!");
+            }
         }
 
         // Botão de acesso a tela Cadastro de Fornecedores
         // Nível de Acesso (Usuário Proprietário)
         private void btn_FornecedoresClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Teste!!!");
-            // if (usuario.TipoUsuario == "Proprietário")
-            // {
-            //     MessageBox.Show("Acesso Concedido!");
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Acesso Negado!");
-            // }
+            if (this.parent.usuario.TipoUsuario == "Proprietario")
+            {
+                MessageBox.Show("Acesso Concedido!");
+            }
+            else
+            {
+                MessageBox.Show("Acesso Negado!");
+            }
         }
 
         // Botão de acesso a tela Cadastro de Usuários
         // Nível de Acesso (Usuário Proprietário)
         private void btn_UsuariosClick(object sender, EventArgs e)
         {
-            CadastroLogin cadastroClick = new CadastroLogin(this);
-            cadastroClick.Show();
+            if (this.parent.usuario.TipoUsuario == "Proprietario")
+            {
+                CadastroLogin cadastroClick = new CadastroLogin(this);
+                cadastroClick.Show();
+            }
+            else
+            {
+                MessageBox.Show("Acesso Negado!");
+            }
         }
 
         // Botão de acesso a tela com a Lista de Usuários (CRUD)
         // Nível de Acesso (Usuário Proprietário)
         private void btn_ListaUsuariosClick(object sender, EventArgs e)
         {
-            ListaUsuario listaUsuarioClick = new ListaUsuario(this);
-            listaUsuarioClick.Show();
+            if (this.parent.usuario.TipoUsuario == "Proprietario")
+            {
+                ListaUsuario listaUsuarioClick = new ListaUsuario(this);
+                listaUsuarioClick.Show();
+            }
+            else
+            {
+                MessageBox.Show("Acesso Negado!");
+            }
         }
 
         // Botão Sair
