@@ -52,12 +52,13 @@ namespace SistemaFilipini
             this.Controls.Add(btn_Relatorios);
             this.btn_Relatorios.Click += new EventHandler(btn_RelatoriosClick);
 
+
             this.btn_MenuSair = new Library.Button();
             this.btn_MenuSair.Location = new Point(130, 210);
             this.btn_MenuSair.Text = "SAIR";
             this.Controls.Add(btn_MenuSair);
             this.btn_MenuSair.Click += new EventHandler(btn_MenuSairClick);
+
         }
     }
 }
-
