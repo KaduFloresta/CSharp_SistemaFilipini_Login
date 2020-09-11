@@ -191,11 +191,11 @@ O preço estimado é com base no acesso que o banco terá ao longo do tempo, iss
 
 **Custos com Mão de Obra** 
 (Funcionário = R$y.yy x 6h diárias x 28d mensais x 6 meses)
-**Ganho por hora**|**horas trabalhadas/dia**|**Dias no Mês**|**Tempo de Desenvolvimento**|**Final**
----|---|---|---|---|---
-Desenvolvedor BackEnd|80|8|28|6|R$ 107.520,00
-Desenvolvedor FrontEnd|80|8|28|6|R$ 107.520,00
-Infra(SGBD)|70|8|28|6|R$ 94.080,00 
+Ganho por hora   |horas trabalhadas/dia|Dias no Mês|Tempo de Desenvolvimento|Final
+——————————————————-——-|---|---|---|---|-————————————|
+Desenvolvedor BackEnd |80 |8  |28 |6  |R$ 107.520,00|
+Desenvolvedor FrontEnd|80 |8  |28 |6  |R$ 107.520,00|
+Infra(SGBD)           |70 |8  |28 |6  |R$ 94.080,00 |
 
 **Custos com Equipamentos**
 * **ASUS S46CB** 
