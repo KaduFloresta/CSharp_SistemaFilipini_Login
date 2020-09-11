@@ -39,7 +39,7 @@ Claudia Werlich
 
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
-![Linha de Produtos FIlipini](<img  src="../../../img/produtos.jpg"  alt="drawing"  width="400"/><br>
+<img src="/img/produtos.jpg" alt="drawing" width="400"/> 
 
 Análise e Desenvolvimento de Sistemas - Senac 2020
 
@@ -93,36 +93,34 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
   ___
 
 ## MENU DE DECOMPOSIÇÃO FUNCIONAL
-![enter image description here](ze) 
+<img src="/img/Esquema.jpg"/> 
 
 ## REQUISITOS
 - Parte 1
-![enter image description here](ze) 
+<img src="/img/Tabela1.png"/> 
 - Parte 2
-![enter image description here](ze)
-- Parte 3
-![enter image description here](ze)
+<img src="/img/Tabela2.png"/>
   
 ## CASO DE USO GERAL**
-![enter image description here](ze)
+<img src="/img/CasoUsoGeral.jpeg"/>
 
 **CASO DE USO - COMPRAS**
-![enter image description here](ze)
+<img src="/img/CasoUsoCompras.jpg"/>
 
 **CASO DE USO – VENDAS**
-![enter image description here](ze)
+<img src="/img/CasoUsoVendas.jpg"/>
 
  **CASO DE USO - RELATÓRIOS**
-![enter image description here](ze)  
+<img src="/img/CasoUsoRelatorios.jpg"/>  
 
 **CASO DE USO - CADASTRO**
-![enter image description here](ze)  
+<img src="/img/CasoUsoCadastro.jpeg"/>  
 
 ## DIAGRAMA DE CLASSES
-![enter image description here](ze)  
+<img src="/img/DiagramaClasses2.jpeg"/>  
 
 ## DIAGRAMA ENTIDADE - RELACIONAMENTO
-![enter image description here](ze)  
+<img src="/img/DiagramaER.jpg"/>  
 
 ## SISTEMA ERP  
 
