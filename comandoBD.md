@@ -1,5 +1,5 @@
-# Avaliacao2KaduFloresta-CSharp
-Avaliação C# (Locadora de Filmes em MVC)
+# CSharp - Qualidade e Testes de Software
+Avaliação C# (Embutidos Filipini)
 
 ### To use Database
 If you like use database, install MariaDB and configure your credentials on `Repositories/Repository.cs`
