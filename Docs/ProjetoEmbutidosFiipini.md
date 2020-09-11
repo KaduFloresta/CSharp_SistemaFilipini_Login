@@ -100,7 +100,7 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
 <img src="/img/CasoUsoGeral.jpeg" alt="drawing" width="800"/>
 
 **CASO DE USO - COMPRAS**
-<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="800"/>
+<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="800"/><br>
 <img src="/img/DescCompras.png" alt="drawing" width="800"/>
 
 **CASO DE USO – VENDAS**
