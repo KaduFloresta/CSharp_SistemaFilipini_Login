@@ -34,7 +34,7 @@ Claudia Werlich
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
 
-<center><img src="/img/produtos.jpg" alt="drawing" width="400"/></center>
+<img src="/img/produtos.jpg" alt="drawing" width="400"/>
 
 Análise e Desenvolvimento de Sistemas - Senac 2020
 
@@ -61,7 +61,8 @@ O Sistema: A empresa Embutidos Filipini necessita de um sistema que seja utiliza
 
 São eles: 
 
-**CADASTRO**  
+**CADASTRO**
+
 Esse mesmo sistema terá o cadastro dos usuários: o usuário proprietário, o usuário funcionário e o usuário fornecedor, cada um com o acesso a parte do sistema de interesse. Há também o cadastro de clientes físicos e jurídicos e de todo o produto e matérias primas utilizadas. 
 
 Cada cadastro deverá ser completo com todos os dados necessários para obter o máximo de informações, tais como: Nome, razão social, CPF, CNPJ, nome do representante (fornecedor) endereço, telefones para contato, e-mail, data do cadastro. 
@@ -77,12 +78,15 @@ Usuário: funcionário | Acesso ao cadastro de clientes, produtos, materiais e a
 Usuário: fornecedor | Acesso a tela de orçamentos e pedidos.  
 
 **RELATÓRIOS**
+
 O sistema também comportará uma tela de Relatórios para controle de despesas/lucro, dentre ele estarão relatórios de Compras e Vendas (diário, semanal, mensal e anual). Há também a relação de todos os produtos e materiais comprados e vendidos e relação total de clientes e devedores e a relação de fornecedores. 
 
 **VENDAS**
+
 A tela de vendas será simples, dentro da legislação do comercio e impostos: O usuário entrará com o cadastro de clientes quando a compra for para pagamento posterior, incluirá os produtos, informará o total ao cliente e optar pela forma de pagamento, sendo eles: dinheiro, cartão de crédito ou débito e pagamento posterior.
 
  **COMPRAS**
+ 
 A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário proprietário entrará com o cadastro do fornecedor, incluirá os produtos para compra e enviará o pedido via sistema para orçamento. O usuário fornecedor fará o orçamento do pedido e retornará o mesmo com os preços de cada produto, total, data de entrega e faturamento. Feito a confirmação do pedido pelo usuário proprietário, o usuário fornecedor receber á a notificação de confirmação de pedido.
 
   ___
@@ -97,40 +101,50 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
 - Parte 2
 <img src="/img/Tabela2.png" alt="drawing" width="800"/>
 
+---
+
 **CASO DE USO GERAL**
 
-<img src="/img/CasoUsoGeral.jpeg" alt="drawing" width="600"/>
+<img src="/img/CasoUsoGeral.jpeg""/>
+                                  
 ---
 
 **CASO DE USO - COMPRAS**
 
-<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="600"/><br>
+<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="800"/><br>
 <img src="/img/DescCompras.png" alt="drawing" width="600"/>
+
 ---
 
 **CASO DE USO – VENDAS**
 
-<img src="/img/CasoUsoVendas.jpg" alt="drawing" width="600"/>
+<img src="/img/CasoUsoVendas.jpg" alt="drawing" width="800"/>
 <img src="/img/DescVendas.png" alt="drawing" width="600"/>
+
 ---
 
  **CASO DE USO - RELATÓRIOS**
  
-<img src="/img/CasoUsoRelatorios.jpg" alt="drawing" width="600"/>
+<img src="/img/CasoUsoRelatorios.jpg" alt="drawing" width="800"/>
 <img src="/img/DescRelatiorios.png" alt="drawing" width="600"/>
 ---
 
 **CASO DE USO - CADASTRO**
 
-<img src="/img/CasoUsoCadastro.jpeg" alt="drawing" width="600"/>
+<img src="/img/CasoUsoCadastro.jpeg" alt="drawing" width="800"/>
 <img src="/img/DescCadastro.png" alt="drawing" width="600"/>  
+
 ---
 
 ## DIAGRAMA DE CLASSES
-<img src="/img/DiagramaClasses2.jpeg" alt="drawing" width="1000"/>  
+<img src="/img/DiagramaClasses2.jpeg" alt="drawing" width="1000"/>
+
+---
 
 ## DIAGRAMA ENTIDADE - RELACIONAMENTO
 <img src="/img/DiagramaER.jpg" alt="drawing" width="1000"/> 
+
+---
 
 ## SISTEMA ERP  
 
