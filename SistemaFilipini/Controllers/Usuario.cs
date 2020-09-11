@@ -56,6 +56,7 @@ namespace Controllers
             UsuarioModels.DeletarUsuario(idUsuario);
         }
 
+        // Confirmação de senhar (teste)
         public static bool ConfirmarSenhasIguais(string senha1, string senha2)
         {
             if (senha1 == senha2)
@@ -68,6 +69,7 @@ namespace Controllers
             }
         }
 
+        // Tratativa para não haver campos vazios
         public static bool CamposPreenchidosCadastroUsuario(
             string nomeCompleto,
             string usuario,

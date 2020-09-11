@@ -11,5 +11,7 @@ namespace Library
             this.SelectionFont = new Font("Tahoma", 10, FontStyle.Bold);
             this.SelectionColor = System.Drawing.Color.Black;
         }
+
+        public char PasswordChar { get; set; }
     }
 }

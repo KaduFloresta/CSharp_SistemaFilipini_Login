@@ -24,5 +24,12 @@ namespace Filipini.Tests
             bool resultado = LoginController.CamposPreenchidosLogin(login, senha);
             Assert.AreEqual(resultado, false);
         }
+        
+        // Teste de Quais os caracteres para Login
+        // Teste de Quais os caracteres para Senha
+        // Teste de Qtde de caracteres para Login
+        // Teste de Qtde de caracteres para Senha
+        // Reconhecer Letras Maísculas e minusculas do Usuário
+        // Reconhecer Letras Maísculas e minusculas da Senha
     }
 }
