@@ -39,7 +39,7 @@ Claudia Werlich
 
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
-![enter image description here](<img  src="https://www.ead.senac.br/arquivo/api/download/publico/1134"  alt="drawing"  width="400"/><br>
+![Linha de Produtos FIlipini](<img  src="../../../img/produtos.jpg"  alt="drawing"  width="400"/><br>
 
 Análise e Desenvolvimento de Sistemas - Senac 2020
 
