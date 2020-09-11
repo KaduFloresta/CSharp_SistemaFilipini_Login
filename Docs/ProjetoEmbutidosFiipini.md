@@ -88,13 +88,13 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
   ___
 
 ## MENU DE DECOMPOSIÇÃO FUNCIONAL
-<img src="/img/Esquema.jpg"/> 
+<img src="/img/Esquema.jpg" alt="drawing" width="600"/> 
 
 ## REQUISITOS
 - Parte 1
-<img src="/img/Tabela1.png"/> 
+<img src="/img/Tabela1.png" alt="drawing" width="600"/> 
 - Parte 2
-<img src="/img/Tabela2.png"/>
+<img src="/img/Tabela2.png" alt="drawing" width="600"/>
   
 ## CASO DE USO GERAL**
 <img src="/img/CasoUsoGeral.jpeg"/>
