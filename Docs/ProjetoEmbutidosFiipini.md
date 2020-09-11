@@ -33,29 +33,7 @@ Claudia Werlich
 
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
-
 <img src="/img/produtos.jpg" alt="drawing" width="400"/>
-
-Análise e Desenvolvimento de Sistemas - Senac 2020
-
-## Documentação
-PROJETO EMBUTIDOS FILIPINI 
-
-**Disciplina:** Arquitetura e Sistemas e Gestão da Informação.
-
-**Professora:** Claudia Werlich.  
-
-**Equipe:**
-- Alisson Wenceslau.
-- Carlos Eduardo Floresta (Líder do Projeto).
-- Leonardo Balitski Filipini.
-- Lucas Elmer Martins.
-- Matheus Henrique Rech.
----
-  
-
-## EMBUTIDOS FILIPINI
-A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.  
 
 O Sistema: A empresa Embutidos Filipini necessita de um sistema que seja utilizado em desktop e smartphones. Ele tem como função principal gerenciar todo o processo de compra de produtos e matérias-primas produção e venda dos produtos fabricados. 
 
