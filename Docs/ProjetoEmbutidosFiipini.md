@@ -34,7 +34,7 @@ Claudia Werlich
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
 
-<img src="/img/produtos.jpg" alt="drawing" width="400" align="center"/> 
+<img src="/img/produtos.jpg" alt="drawing" width="400"/> 
 
 Análise e Desenvolvimento de Sistemas - Senac 2020
 
@@ -95,26 +95,30 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
 <img src="/img/Tabela1.png" alt="drawing" width="800"/> 
 - Parte 2
 <img src="/img/Tabela2.png" alt="drawing" width="800"/>
-  
+
 ## CASO DE USO GERAL**
-<img src="/img/CasoUsoGeral.jpeg" alt="drawing" width="800"/>
 
+<img src="/img/CasoUsoGeral.jpeg" alt="drawing" width="600"/>
+---
 **CASO DE USO - COMPRAS**
-<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="800"/><br>
-<img src="/img/DescCompras.png" alt="drawing" width="800"/>
 
+<img src="/img/CasoUsoCompras.jpg" alt="drawing" width="600"/><br>
+<img src="/img/DescCompras.png" alt="drawing" width="600"/>
+---
 **CASO DE USO – VENDAS**
-<img src="/img/CasoUsoVendas.jpg" alt="drawing" width="800"/>
-<img src="/img/DescVendas.png" alt="drawing" width="800"/>
 
+<img src="/img/CasoUsoVendas.jpg" alt="drawing" width="600"/>
+<img src="/img/DescVendas.png" alt="drawing" width="600"/>
+---
  **CASO DE USO - RELATÓRIOS**
-<img src="/img/CasoUsoRelatorios.jpg" alt="drawing" width="800"/>
-<img src="/img/DescRelatiorios.png" alt="drawing" width="800"/>
-
+ 
+<img src="/img/CasoUsoRelatorios.jpg" alt="drawing" width="600"/>
+<img src="/img/DescRelatiorios.png" alt="drawing" width="600"/>
+---
 **CASO DE USO - CADASTRO**
-<img src="/img/CasoUsoCadastro.jpeg" alt="drawing" width="800"/>
-<img src="/img/DescCadastro.png" alt="drawing" width="800"/>  
-
+<img src="/img/CasoUsoCadastro.jpeg" alt="drawing" width="600"/>
+<img src="/img/DescCadastro.png" alt="drawing" width="600"/>  
+---
 ## DIAGRAMA DE CLASSES
 <img src="/img/DiagramaClasses2.jpeg" alt="drawing" width="1000"/>  
 
