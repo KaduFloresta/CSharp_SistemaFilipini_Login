@@ -105,7 +105,7 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
 
 **CASO DE USO GERAL**
 
-<img src="/img/CasoUsoGeral.jpeg""/>
+<img src="/img/CasoUsoGeral.jpeg"/>
                                   
 ---
 
@@ -127,6 +127,7 @@ A tela de compras será muito parecida com a tela de vendas, ou seja, o usuário
  
 <img src="/img/CasoUsoRelatorios.jpg" alt="drawing" width="800"/>
 <img src="/img/DescRelatiorios.png" alt="drawing" width="600"/>
+
 ---
 
 **CASO DE USO - CADASTRO**
