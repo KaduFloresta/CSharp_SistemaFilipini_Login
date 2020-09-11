@@ -34,7 +34,7 @@ Claudia Werlich
 A Empresa: Trata-se da criação de um sistema para uma pequena empresa de embutidos caseiros no interior do Paraná que além de produzir, fornece os produtos para pequenos comércios e atende os clientes finais.
 
 
-<img src="/img/produtos.jpg" alt="drawing" width="400"/> 
+<img src="/img/produtos.jpg" alt="drawing" width="400" align="center"/> 
 
 Análise e Desenvolvimento de Sistemas - Senac 2020
 
