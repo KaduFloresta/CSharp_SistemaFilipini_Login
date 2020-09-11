@@ -27,6 +27,7 @@ namespace SistemaFilipini
             Library.TextBox txt_Senha;
             Library.Button btn_OK;
             Library.Button btn_Sair;
+            
             // Dados de entrada do Login do Usuário
             public Login()
             {
@@ -53,6 +54,7 @@ namespace SistemaFilipini
 
                 this.txt_Senha = new Library.TextBox();
                 this.txt_Senha.Location = new Point(90, 120);
+                this.txt_Senha.PasswordChar = '*';
                 this.Controls.Add(txt_Senha);
 
                 this.btn_OK = new Library.Button();

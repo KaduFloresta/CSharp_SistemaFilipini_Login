@@ -19,10 +19,10 @@ namespace SistemaFilipini
         {
             if (usuario.TipoUsuario != "Fornecedor")
             {
-            this.Hide();
-            Cadastro cadastroClick = new Cadastro(this);
-            cadastroClick.Show();
-             }
+                this.Hide();
+                Cadastro cadastroClick = new Cadastro(this);
+                cadastroClick.Show();
+            }
             else
             {
                 MessageBox.Show("Acesso Negado!");
