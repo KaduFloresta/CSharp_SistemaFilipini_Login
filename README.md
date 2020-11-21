@@ -49,11 +49,13 @@ Para analisar o aprendizado, desenvolva um mini sistema conforme documentação 
     - [X] Criar 3 casos de teste.
     - [X] Desenvolver os cenários de teste para os requisitos.
     - [X] Aplicar os testes no sistema conforme os Casos e Cenários de Testes.
+    - [X] 💽 <a href="https://github.com/KaduFloresta/CSharp_SistemaFilipini_Login/blob/master/Filipini.Tests/Login_Tests.cs">Testes de Software</a>
     
 3. Arquitetura de Rede - Professor Diogo Bortolini.
 
 * Conexão:
     - [X] Aplicação da conexão com o BD (Cloud) no sistema.
+    - [X] 💽 <a href="https://github.com/KaduFloresta/CSharp_SistemaFilipini_Login/blob/master/SistemaFilipini/Repositories/Context.cs">Conexão com Cloud</a>
     
 4. Arquitetura de Software - Professora Claudia Werlich 
     
@@ -66,6 +68,7 @@ Para analisar o aprendizado, desenvolva um mini sistema conforme documentação 
     - [X] Diagrama ER.
     - [X] Planejamento de Acesso.
     - [X] Realção de Custos do Projeto. 
+    - [X] 💽 <a href="https://github.com/KaduFloresta/CSharp_SistemaFilipini_Login/blob/master/Docs/ProjetoEmbutidosFiipini.md">Documentação</a>
 
 **O código fonte deverá ser trabalhando dentro do GitHub, sendo sincronizado e aberto PR ao final do desenvolvimento.**
 
