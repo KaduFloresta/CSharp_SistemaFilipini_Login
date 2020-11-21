@@ -49,7 +49,7 @@ Para analisar o aprendizado, desenvolva um mini sistema conforme documentação 
     - [X] Criar 3 casos de teste.
     - [X] Desenvolver os cenários de teste para os requisitos.
     - [X] Aplicar os testes no sistema conforme os Casos e Cenários de Testes.
-    - [X] 💽 <a href="https://github.com/KaduFloresta/CSharp_SistemaFilipini_Login/blob/master/Filipini.Tests/Login_Tests.cs">Testes de Software</a>
+    - [X] 💽 <a href="https://github.com/KaduFloresta/CSharp_SistemaFilipini_Login/tree/master/Filipini.Tests">Testes de Software</a>
     
 3. Arquitetura de Rede - Professor Diogo Bortolini.
 
