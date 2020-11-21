@@ -26,11 +26,11 @@
 
 # CSharp - Avaliação MultiDisciplinas
 
-Projeto Sistema Embutidos Filipni
-- Arquitetura de Software - Documentação.
-- Arquitetura de Rede - Conexão com o BD (cloud).
-- Qualidade e Testes de Software - Teste aplicados no Login do sistema.
-- Programação Desktop - Desenvolvimento do sistema.
+## Projeto Sistema Embutidos Filipni
+- [X] Arquitetura de Software - Documentação.
+- [X] Arquitetura de Rede - Conexão com o BD (cloud).
+- [X] Qualidade e Testes de Software - Teste aplicados no Login do sistema.
+- [X] Programação Desktop - Desenvolvimento do sistema.
 
 ## Instruções# 
 
@@ -38,33 +38,35 @@ Projeto Sistema Embutidos Filipni
 Para analisar o aprendizado, desenvolva um mini sistema conforme documentação apresentada na disciplina Arquitetura de Sotware.
 
 * Sistema de possuir:
-    - Classes Login (usuário).
-    - Camadas (MVC).
-    - Conexão com o Banco de Dados.
-    - Interfaces.
+    - [X] Classes Login (usuário).
+    - [X] Camadas (MVC).
+    - [X] Conexão com o Banco de Dados.
+    - [X] Interfaces.
     
  2. Qualidade e Testes de Software - Professora Juliana Martins.
  
 * Testes:
-    - Criar 3 casos de teste.
-    - Desenvolver os cenários de teste para os requisitos.
-    - Aplicar os testes no sistema conforme os Casos e Cenários de Testes.
+    - [X] Criar 3 casos de teste.
+    - [X] Desenvolver os cenários de teste para os requisitos.
+    - [X] Aplicar os testes no sistema conforme os Casos e Cenários de Testes.
     
 3. Arquitetura de Rede - Professor Diogo Bortolini.
 
 * Conexão:
-    - Aplicação da conexão com o BD (Cloud) no sistema.
+    - [X] Aplicação da conexão com o BD (Cloud) no sistema.
     
 4. Arquitetura de Software - Professora Claudia Werlich 
     
 * Documentação:
-    - Escopo do Projeto.
-    - Requisitos F e NF.
-    - Diagamas de Uso.
-    - Casos de Uso.
-    - Diagrama de Classes.
-    - Diagrama ER.
-    - Planejamento de Acesso.
-    - Realção de Custos do Projeto. 
+    - [X] Escopo do Projeto.
+    - [X] Requisitos F e NF.
+    - [X] Diagamas de Uso.
+    - [X] Casos de Uso.
+    - [X] Diagrama de Classes.
+    - [X] Diagrama ER.
+    - [X] Planejamento de Acesso.
+    - [X] Realção de Custos do Projeto. 
 
 **O código fonte deverá ser trabalhando dentro do GitHub, sendo sincronizado e aberto PR ao final do desenvolvimento.**
+
+---
